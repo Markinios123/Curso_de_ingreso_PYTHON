@@ -7,8 +7,8 @@ import random
 
 
 '''
-nombre:
-apellido:
+nombre: Marcos
+apellido:nuñez
 ---
 Ejercicio: for_01
 ---

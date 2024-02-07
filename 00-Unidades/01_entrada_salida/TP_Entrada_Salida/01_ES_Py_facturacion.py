@@ -5,15 +5,15 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Marcos
+apellido:nuñez
 ---
 TP: ES_Facturaciones
 ---
 Enunciado:
 Para el departamento de facturación:
-    A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
-    B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
+    A.	Ingresar tres precios de productos y mostrar la suma de los mismos. (total)
+    B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.(promedio)
 	C.	ingresar tres precios de productos sumarlos y mostrar el precio final (más IVA 21%).
 '''
 
@@ -52,13 +52,37 @@ class App(customtkinter.CTk):
         self.btn_total_iva.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_total_on_click(self):
-        pass
+        importe_1_txt = self.txt_importe_1.get() 
+        num1 = float (importe_1_txt)
+        importe_2_txt = self.txt_importe_2.get() 
+        num2 = float (importe_2_txt)
+        importe_3_txt = self.txt_importe_3.get() 
+        num3 = float (importe_3_txt)
+        total = num1 + num2 + num3
+        alert (title = "Total", message = f"el total de la suma de todo es: {total} ")
 
     def btn_promedio_on_click(self):
-        pass
+        importe_1_txt = self.txt_importe_1.get() 
+        num1 = float (importe_1_txt)
+        importe_2_txt = self.txt_importe_2.get() 
+        num2 = float (importe_2_txt)
+        importe_3_txt = self.txt_importe_3.get() 
+        num3 = float (importe_3_txt)
+        suma = num1 + num2 + num3
+        total = suma / 3
+        alert (title = "Promedio", message = f"El promedio es: {total} ")
 
     def btn_total_iva_on_click(self):
-        pass      
+        importe_1_txt = self.txt_importe_1.get() 
+        num1 = float (importe_1_txt)
+        importe_2_txt = self.txt_importe_2.get() 
+        num2 = float (importe_2_txt)
+        importe_3_txt = self.txt_importe_3.get() 
+        num3 = float (importe_3_txt)
+        suma = num1 + num2 + num3
+        total = suma * 0.21
+        alert (title = "Mas iva", message = f"Mas el 21% de iva es: {total} ")
+     
     
 if __name__ == "__main__":
     app = App()
