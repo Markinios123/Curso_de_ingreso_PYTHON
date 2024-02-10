@@ -6,7 +6,7 @@ import customtkinter
 
 '''
 nombre: Marcos
-apellido:nuñez
+apellido:Nuñez
 ---
 Ejercicio: if_06bis
 ---
@@ -39,7 +39,19 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        altura = self.txt_altura.get()
+        altura_jugador = int(altura)
+
+        if altura_jugador < 160:
+            mensaje = "Base"
+        elif altura_jugador <= 179:
+            mensaje = "Escolta"
+        elif  altura_jugador <= 199:
+            mensaje = "Alero"
+        else:
+            mensaje = "Ala-Pivot o Pivot"
+
+        alert (title = "Posición del jugador", message = mensaje )             
 
         
         
