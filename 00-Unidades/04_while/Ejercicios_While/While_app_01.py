@@ -29,9 +29,21 @@ class App(customtkinter.CTk):
         
     
     def btn_mostrar_iteracion_on_click(self):
-        pass
+
+
+        contador_interacion = 0 
+
+        while contador_interacion < 10 :
+            alert ("",contador_interacion + 1)
+            contador_interacion = contador_interacion + 1
+
+        alert("","holas")
     
     
+
+
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
